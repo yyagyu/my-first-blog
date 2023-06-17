@@ -23,8 +23,8 @@ def post_new(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            if request.FILES:
-                post.image = request.FILES.get('image')
+            #if request.FILES:
+            #    post.image = request.FILES.get('image')
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -39,8 +39,8 @@ def post_edit(request, pk):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            if request.FILES:
-                post.image = request.FILES.get('image')
+            #if request.FILES:
+            #    post.image = request.FILES.get('image')
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
