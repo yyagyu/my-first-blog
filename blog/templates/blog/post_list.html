@@ -8,6 +8,9 @@
                             </div>
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
+                            <p>{% if post.image %}
+                                <img src="{{ post.image.url }}" alt="" class="index-img">
+                            {% endif %}</p>
                             <a href="{% url 'post_detail' pk=post.pk %}">コメント: {{ post.approved_comments.count }}</a>
                         </div>
                     {% endfor %}

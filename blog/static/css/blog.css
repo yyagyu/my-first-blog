@@ -55,3 +55,13 @@ h1, h2, h3, h4 {
 .comment {
     margin: 20px 0px 20px 20px;
 }
+
+.index-img {
+    object-fit: cover;
+    height: 240px;
+}
+
+.detail-img {
+    object-fit: cover;
+    width: 100%;
+}

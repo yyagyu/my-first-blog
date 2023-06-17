@@ -6,10 +6,12 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'text',)
+        fields = ('title', 'text','image')
+        #image = forms.ImageField(Label='イメージ画像', required=False)
         labels = {
             'title':'タイトル',
-            'text':'本文'
+            'text':'本文',
+            'image':'イメージ画像'
         }
 
 class CommentForm(forms.ModelForm):
